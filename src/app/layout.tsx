@@ -1,9 +1,11 @@
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
 import "./globals.css";
-import {ColorSchemeScript, createTheme, MantineProvider} from "@mantine/core";
+import {ColorSchemeScript, MantineProvider} from "@mantine/core";
 
 import type { Metadata } from "next";
+import ServiceWorkerRegister from "@/app/ServiceWorkerRegister";
+import React from "react";
 
 export const metadata: Metadata = {
     title: "TrackIt",
@@ -23,6 +25,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <body>
         {/* Force a clean theme */}
         <MantineProvider defaultColorScheme="light">
+            <ServiceWorkerRegister/>
             {children}
         </MantineProvider>
         <script dangerouslySetInnerHTML={{
