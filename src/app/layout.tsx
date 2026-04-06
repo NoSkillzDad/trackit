@@ -41,7 +41,8 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
     });
   }
 `
-            }}/>
+            }}
+            />
         </MantineProvider>
 
         </body>
