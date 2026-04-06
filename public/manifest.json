@@ -2,11 +2,6 @@
   "name": "Personal Tracker",
   "short_name": "TrackIt",
   "description": "Offline-first habit and activity tracker",
-
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -20,5 +15,10 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ]
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+
 }
