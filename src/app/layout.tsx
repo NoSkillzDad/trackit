@@ -6,6 +6,9 @@ import {ColorSchemeScript, MantineProvider} from "@mantine/core";
 import type {Metadata} from "next";
 import ServiceWorkerRegister from "@/app/ServiceWorkerRegister";
 import React from "react";
+import {PWAInstaller} from "@/components/PWAInstaller";
+import { Notifications } from '@mantine/notifications';
+import '@mantine/notifications/styles.css';
 
 export const metadata: Metadata = {
     title: "TrackIt",
@@ -27,21 +30,23 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         {/* Force a clean theme */}
         <MantineProvider defaultColorScheme="light">
             <ServiceWorkerRegister/>
+            <Notifications position="bottom-center" zIndex={1000} />
+            <PWAInstaller />
             {children}
-            <script dangerouslySetInnerHTML={{
-                __html: `
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js');
-    });
-    window.addEventListener("beforeinstallprompt", (e) => {
-  console.log("PWA install prompt is available");
-});
+{/*            <script dangerouslySetInnerHTML={{*/}
+{/*                __html: `*/}
+{/*  if ('serviceWorker' in navigator) {*/}
+{/*    window.addEventListener('load', () => {*/}
+{/*      navigator.serviceWorker.register('/sw.js');*/}
+{/*    });*/}
+{/*    window.addEventListener("beforeinstallprompt", (e) => {*/}
+{/*  console.log("PWA install prompt is available");*/}
+{/*});*/}
 
-  }
-`
-            }}
-            />
+{/*  }*/}
+{/*`*/}
+{/*            }}*/}
+{/*            />*/}
         </MantineProvider>
 
         </body>
