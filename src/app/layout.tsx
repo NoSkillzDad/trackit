@@ -23,16 +23,6 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en" suppressHydrationWarning>
-
-
-        <head>
-            <link rel="manifest" href="/manifest.json?v=3"/>
-            <meta name="apple-mobile-web-app-capable" content="yes"/>
-            <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
-            <meta name="theme-color" content="#228be6"/>
-            <link rel="apple-touch-icon" href="/web-app-manifest-192x192.png"/>
-            <ColorSchemeScript/>
-        </head>
         <body>
         {/* Force a clean theme */}
         <MantineProvider defaultColorScheme="light">

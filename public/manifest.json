@@ -2,7 +2,7 @@
   "name": "Personal Tracker",
   "short_name": "TrackIt",
   "description": "Offline-first habit and activity tracker",
-  "manifest": "/manifest.json?v=3",
+  "manifest": "/manifest.json?v=4",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
