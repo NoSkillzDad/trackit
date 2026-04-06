@@ -34,6 +34,10 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js');
     });
+    window.addEventListener("beforeinstallprompt", (e) => {
+  console.log("PWA install prompt is available");
+});
+
   }
 `
             }}
