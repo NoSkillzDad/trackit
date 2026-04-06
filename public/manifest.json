@@ -26,5 +26,18 @@
       "type": "image/png",
       "purpose": "any"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "/desktop-1280x720.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/mobile-640x1136.png",
+      "sizes": "640x1136",
+      "type": "image/png"
+    }
   ]
 }

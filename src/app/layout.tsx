@@ -6,13 +6,15 @@ import {ColorSchemeScript, MantineProvider} from "@mantine/core";
 import type {Metadata} from "next";
 import ServiceWorkerRegister from "@/app/ServiceWorkerRegister";
 import React from "react";
+import {PWAInstaller} from "@/components/PWAInstaller";
+import { Notifications } from '@mantine/notifications';
+import '@mantine/notifications/styles.css';
 
 export const metadata: Metadata = {
     title: "TrackIt",
     description: "Personal Activity Tracker",
     manifest: "/manifest.json",
-    themeColor: "#228be6",
-    viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
+    // viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
     appleWebApp: {
         capable: true,
         statusBarStyle: "default",
@@ -27,6 +29,8 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         {/* Force a clean theme */}
         <MantineProvider defaultColorScheme="light">
             <ServiceWorkerRegister/>
+            <Notifications position="bottom-center" zIndex={1000} />
+            <PWAInstaller/>
             {children}
             <script dangerouslySetInnerHTML={{
                 __html: `
