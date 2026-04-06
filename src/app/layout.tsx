@@ -9,9 +9,15 @@ import React from "react";
 
 export const metadata: Metadata = {
     title: "TrackIt",
-    description: "Simple tracking app",
+    description: "Personal Activity Tracker",
     manifest: "/manifest.json",
+    themeColor: "#228be6",
     viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
+    appleWebApp: {
+        capable: true,
+        statusBarStyle: "default",
+        title: "TrackIt",
+    },
 };
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
