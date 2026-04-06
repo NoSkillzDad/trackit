@@ -92,7 +92,7 @@ export function Dashboard() {
                             flex: 1 // Takes up remaining space to push the others to the edges
                         }}
                     >
-                        TRACKER
+                        TrackIt
                     </Title>
 
                     {/* 3. Right Menu: The Menu button with padding from the edge */}
